@@ -1,0 +1,20 @@
+<!--This div renders if quizOver is false-->
+<div *ngIf="!quizOver">
+    <app-question [questionIndex]="currentIndex" (answers)="receiveAnswers($event)">
+    </app-question>
+    <br>
+    <button (click)="submit()" class="btn btn-primary">Submit</button>
+    <br>
+    <div style="margin-top: 15px;">
+        <button (click)="goPrevious()">Previous</button>
+        <button (click)="goNext()">Next</button>
+    </div>
+</div>
+
+<!--This div renders if quizOver is true-->
+<div *ngIf="quizOver" class="border">
+    <h4>Quiz is Over!</h4>
+    Your score is {{score}} / {{10}}
+    <br>
+    <a href="/"><button class="btn btn-primary" routerLinkActive="active">Check leaderboards</button></a>
+</div>

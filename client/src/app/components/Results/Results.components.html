@@ -1,0 +1,39 @@
+<a href="/quiz"><button class="btn btn-primary" routerLinkActive="active" style="margin-bottom: 20px;">Start
+        Quiz</button></a>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Question 1</th>
+            <th>Question 2</th>
+            <th>Question 3</th>
+            <th>Question 4</th>
+            <th>Question 5</th>
+            <th>Question 6</th>
+            <th>Question 7</th>
+            <th>Question 8</th>
+            <th>Question 9</th>
+            <th>Question 10</th>
+            <th>Total Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" style="background-color: rgba(0,0,0,.05);">
+            <td>{{user.email}}</td>
+            <td>{{user.q1}}</td>
+            <td>{{user.q2}}</td>
+            <td>{{user.q3}}</td>
+            <td>{{user.q4}}</td>
+            <td>{{user.q5}}</td>
+            <td>{{user.q6}}</td>
+            <td>{{user.q7}}</td>
+            <td>{{user.q8}}</td>
+            <td>{{user.q9}}</td>
+            <td>{{user.q10}}</td>
+            <td>{{user.total}}</td>
+        </tr>
+        <tr *ngIf="!isUsers" style="background-color: rgba(0,0,0,.05);">
+            <td colspan="12">No results yet</td>
+        </tr>
+    </tbody>
+</table>
