@@ -28,11 +28,3 @@ export const initScores = (req: Request, res: Response) => {
 
 }
 
-export const updateScores = (req: Request, res: Response) => {
-
-    let id = req.body.id;
-    let q = req.body.question;
-
-    ScoreCard.findByIdAndUpdate(id, { $inc: { "total": 1 } })
-
-}
