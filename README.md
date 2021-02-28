@@ -1,4 +1,4 @@
-# Aitheon-Test
+# Angular-quiz
 
 ## Step 1:
 Clone the repo and run `npm i`
